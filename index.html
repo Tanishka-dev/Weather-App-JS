@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="./app.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+      integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style.css" />
 
     <meta charset="UTF-8" />
@@ -9,8 +16,12 @@
     <title>Weahther App</title>
   </head>
   <body>
+    <div class="search">
+      <input class="search-bar" />
+      <input type="button" value="Search" class="search-btn"></input>
+    </div>
     <div class="location">
-      <h1 class="location-timezone">Location-Timezone</h1>
+      <h1 class="location-city">Weather in Noida</h1>
       <p>Icon</p>
     </div>
     <div class="temperature">
@@ -18,7 +29,9 @@
         <h2 class="temperature-degree">29</h2>
         <span>F</span>
       </div>
-      <div class="temperature-des">It is cold</div>
+      <div class="temperature-des">Cloudy</div>
+      <div class="humidity">Humidity: 60%</div>
+      <div class="wind">Wind: 12km/hr</div>
     </div>
   </body>
 </html>

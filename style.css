@@ -46,3 +46,31 @@ body {
 .temperature-des {
   font-size: 20px;
 }
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.search-btn {
+  border: none;
+  background: linear-gradient(#cccbc6, #9e96b9);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.search-bar {
+  border: none;
+  text-decoration: none;
+  background-color: #cccbc6;
+  border-radius: 18px;
+  padding: 0.8em;
+  outline: none;
+
+  color: aliceblue;
+}
