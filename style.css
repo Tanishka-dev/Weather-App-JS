@@ -3,48 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: linear-gradient(#9e96b9, #cccbc6);
-  font-family: sans-serif;
-  color: aliceblue;
-}
-
-.location,
-.temperature {
-  height: 30vh;
-  width: 50%;
-  justify-content: space-around;
-  display: flex;
-  align-items: center;
-}
-
-.temperature {
-  flex-direction: column;
-}
-
-.degree-section {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.degree-sectionspan {
-  margin: 10px;
-  font-size: 30px;
-}
-
-.degree-section h2 {
-  font-size: 40px;
-}
-
-.temperature-des {
-  font-size: 20px;
+  height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #222;
+  background: linear-gradient(#d3c9c2, #cccbcc);
+  font-size: 120%;
 }
 
 .search {
@@ -54,23 +22,87 @@ body {
   flex-direction: row;
 }
 
-.search-btn {
-  border: none;
-  background: linear-gradient(#cccbc6, #9e96b9);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
+button {
+  margin: 0.5em;
   border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #9e96b9;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.search-bar {
+input.search-bar {
   border: none;
-  text-decoration: none;
-  background-color: #cccbc6;
-  border-radius: 18px;
-  padding: 0.8em;
   outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
 
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading::after {
+  visibility: visible;
+  content: "Loading...";
   color: aliceblue;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: "url('https://unsplash.com/photos/MF9Wy1NA55I')";
+  }
 }
