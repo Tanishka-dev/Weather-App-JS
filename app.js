@@ -53,18 +53,30 @@ function getweather(data){
   document.querySelector(".wind").innerHTML = "Wind: " + speed + "Km/hr";
   document.querySelector(".weather ").classList.remove("loading");
   document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + description + "')";
+  document.querySelector(".temperature-degree").style.position = "relative";
+  document.querySelector(".temperature-degree").style.visibility = "visible";
+  document.querySelector(".humidity").style.position = "relative";
+  document.querySelector(".humidity").style.visibility = "visible";
+  document.querySelector(".wind").style.position = "relative";
+  document.querySelector(".wind").style.visibility = "visible";
 }
 
 function noinput(data){
   document.querySelector(".location-city").innerHTML = "Something went wrong!";
-  document.querySelector(".temperature-degree").remove()
-  document.querySelector(".humidity").remove()
-  document.querySelector(".wind").remove()
+  document.querySelector(".temperature-degree").style.position = "absolute";
+  document.querySelector(".temperature-degree").style.visibility = "hidden";
+  document.querySelector(".humidity").style.position = "absolute";
+  document.querySelector(".humidity").style.visibility = "hidden";
+  document.querySelector(".wind").style.position = "absolute";
+  document.querySelector(".wind").style.visibility = "hidden";
 }
 
 function citynotfound(data){
   document.querySelector(".location-city").innerHTML = "City not found";
-  document.querySelector(".temperature-degree").remove()
-  document.querySelector(".humidity").remove()
-  document.querySelector(".wind").remove()
+  document.querySelector(".temperature-degree").style.position = "absolute";
+  document.querySelector(".temperature-degree").style.visibility = "hidden";
+  document.querySelector(".humidity").style.position = "absolute";
+  document.querySelector(".humidity").style.visibility = "hidden";
+  document.querySelector(".wind").style.position = "absolute";
+  document.querySelector(".wind").style.visibility = "hidden";
 }
