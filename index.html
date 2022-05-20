@@ -13,12 +13,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weahther App</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="card">
       <div class="search">
-        <input class="search-bar" />
+        <input class="search-bar" placeholder="City name" />
         <button>
           <svg
             stroke="currentColor"
@@ -38,17 +38,11 @@
       <div class="weather loading">
         <div class="location">
           <h1 class="location-city">Weather in Noida</h1>
-          <img
-            src="https://openweathermap.org/img/wn/04n.png"
-            alt=""
-            class="icon"
-          />
+          <span id="icon" class="icon"></span>
         </div>
         <div class="temperature">
-          <div class="degree-section">
-            <h2 class="temperature-degree">29<span>°C</span></h2>
-          </div>
-          <div class="temperature-des">Cloudy</div>
+          <h2 class="temperature-degree">29<span>°C</span></h2>
+          <div class="weather-description" style="text-transform: capitalize;">Cloudy</div>
           <div class="humidity">Humidity: 60%</div>
           <div class="wind">Wind: 12km/hr</div>
         </div>
