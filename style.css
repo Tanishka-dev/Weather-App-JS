@@ -4,14 +4,17 @@
   box-sizing: border-box;
 }
 body {
+  width: 100%;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background: #222;
-  background: linear-gradient(#d3c9c2, #cccbcc);
+  background: linear-gradient(#d3c9c2, #657452);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 120%;
 }
 
@@ -33,6 +36,7 @@ button {
   color: white;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  margin-left: auto;
 }
 
 input.search-bar {
@@ -43,8 +47,9 @@ input.search-bar {
   background: #7c7c7c2b;
   color: white;
   font-family: inherit;
-  font-size: 105%;
-  width: calc(100% - 100px);
+  font-size: 2em;
+  margin-right: auto;
+  width: calc(100% - 50px);
 }
 
 .weather.loading {
@@ -65,6 +70,7 @@ input.search-bar {
 .location {
   display: flex;
   align-items: center;
+  margin: 20px 0;
 }
 
 .card {
@@ -99,6 +105,23 @@ h1.temp {
 .description {
   text-transform: capitalize;
   margin-left: 8px;
+}
+
+.icon{
+  background: url(https://openweathermap.org/img/wn/04n.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.icon::before{
+  content: '';
+  width: 100px;
+  height: 100px;
+  background: #fffffff0;
+  border-radius: 20px;
+  z-index: -1;
 }
 
 @media only screen and (max-width: 600px) {
