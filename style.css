@@ -108,21 +108,18 @@ h1.temp {
 }
 
 .icon{
-  background: url(https://openweathermap.org/img/wn/04n.png);
+  background: url(https://openweathermap.org/img/wn/04n.png) no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 20px;
 }
-/* 
+
 .icon::before{
   content: '';
   width: 100px;
   height: 100px;
-  background: #fffffff0;
-  border-radius: 20px;
-  z-index: -1;
-} */
+}
 
 @media only screen and (max-width: 600px) {
   body {
